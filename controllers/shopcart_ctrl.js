@@ -17,4 +17,3 @@ export async function getGoods(req, res) {
     })
   }
 }
-
