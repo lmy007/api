@@ -4,10 +4,11 @@ export async function getGoods(req, res) {
     const sql = 'SELECT * FROM shopcart'
     const sqlArr = []
     const data = await sqlConnection(sql, sqlArr)
+    res.setHeader("Access-Control-Allow-Origin", "*")
     res.send({
       status: 200,
-      messeage: '獲取列表成功',
-      data: data
+      message: '獲取列表成功',
+      list: data
     })
   } catch (e) {
     res.send({
