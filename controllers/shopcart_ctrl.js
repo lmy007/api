@@ -5,6 +5,7 @@ export async function getGoods(req, res) {
     const sqlArr = []
     const data = await sqlConnection(sql, sqlArr)
     res.setHeader("Access-Control-Allow-Origin", "*")
+    
     res.send({
       status: 200,
       message: '獲取列表成功',
@@ -18,3 +19,4 @@ export async function getGoods(req, res) {
     })
   }
 }
+
